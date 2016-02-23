@@ -11,7 +11,9 @@ import UIKit
 class AlarmTableViewCell: UITableViewCell {
 
     @IBOutlet weak var alarmBackgroundView: UIView!
-    
+    @IBOutlet weak var nameLabel: UIView!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var alarmSwitch: UISwitch!
     
     func configureCell() {
         alarmBackgroundView.layer.cornerRadius = 10

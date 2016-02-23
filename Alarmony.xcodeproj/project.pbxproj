@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0235FC4C1C7C0E3E0077E250 /* Alarm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0235FC4A1C7C0E3E0077E250 /* Alarm+CoreDataProperties.swift */; };
+		0235FC4D1C7C0E3E0077E250 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0235FC4B1C7C0E3E0077E250 /* Alarm.swift */; };
 		024D9ADD1C78E80E00C361C4 /* RepeatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024D9ADC1C78E80E00C361C4 /* RepeatTableViewCell.swift */; };
 		024D9ADF1C78E82500C361C4 /* AlarmNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024D9ADE1C78E82500C361C4 /* AlarmNameTableViewCell.swift */; };
 		024D9AE11C78E83200C361C4 /* SoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024D9AE01C78E83200C361C4 /* SoundTableViewCell.swift */; };
@@ -21,9 +23,13 @@
 		02C6DEE31C77FEA6009F5A38 /* AlarmDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6DEE21C77FEA6009F5A38 /* AlarmDetailTableViewController.swift */; };
 		02C6DEE51C7800DB009F5A38 /* PickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6DEE41C7800DB009F5A38 /* PickerTableViewCell.swift */; };
 		02EFBCF21C78EEF00074756D /* DeleteAlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EFBCF11C78EEF00074756D /* DeleteAlarmTableViewCell.swift */; };
+		02EFBCF51C794AB20074756D /* Alarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02EFBCF31C794AB20074756D /* Alarm.xcdatamodeld */; };
+		02EFBCF71C795BFC0074756D /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EFBCF61C795BFC0074756D /* Stack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0235FC4A1C7C0E3E0077E250 /* Alarm+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Alarm+CoreDataProperties.swift"; path = "../Alarm+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0235FC4B1C7C0E3E0077E250 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Alarm.swift; path = ../Alarm.swift; sourceTree = "<group>"; };
 		024D9ADC1C78E80E00C361C4 /* RepeatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatTableViewCell.swift; sourceTree = "<group>"; };
 		024D9ADE1C78E82500C361C4 /* AlarmNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmNameTableViewCell.swift; sourceTree = "<group>"; };
 		024D9AE01C78E83200C361C4 /* SoundTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundTableViewCell.swift; sourceTree = "<group>"; };
@@ -40,6 +46,8 @@
 		02C6DEE21C77FEA6009F5A38 /* AlarmDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmDetailTableViewController.swift; sourceTree = "<group>"; };
 		02C6DEE41C7800DB009F5A38 /* PickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTableViewCell.swift; sourceTree = "<group>"; };
 		02EFBCF11C78EEF00074756D /* DeleteAlarmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteAlarmTableViewCell.swift; sourceTree = "<group>"; };
+		02EFBCF41C794AB20074756D /* Alarm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alarm.xcdatamodel; sourceTree = "<group>"; };
+		02EFBCF61C795BFC0074756D /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0235FC491C7C0DAF0077E250 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0235FC4A1C7C0E3E0077E250 /* Alarm+CoreDataProperties.swift */,
+				0235FC4B1C7C0E3E0077E250 /* Alarm.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		024D9AE41C78E84400C361C4 /* AlarmDetail Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +107,7 @@
 				02C6DEDC1C77EED9009F5A38 /* AlarmTableViewCell.swift */,
 				02C6DEE21C77FEA6009F5A38 /* AlarmDetailTableViewController.swift */,
 				024D9AE41C78E84400C361C4 /* AlarmDetail Cells */,
+				0235FC491C7C0DAF0077E250 /* Model */,
 				02C6DEDB1C77ECE1009F5A38 /* Other */,
 			);
 			path = Alarmony;
@@ -98,6 +116,8 @@
 		02C6DEDB1C77ECE1009F5A38 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				02EFBCF61C795BFC0074756D /* Stack.swift */,
+				02EFBCF31C794AB20074756D /* Alarm.xcdatamodeld */,
 				02C6DEC71C77EC44009F5A38 /* AppDelegate.swift */,
 				02C6DEE01C77F5A7009F5A38 /* UIColor.swift */,
 				02C6DECE1C77EC44009F5A38 /* Assets.xcassets */,
@@ -179,16 +199,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				024D9ADF1C78E82500C361C4 /* AlarmNameTableViewCell.swift in Sources */,
+				02EFBCF71C795BFC0074756D /* Stack.swift in Sources */,
+				0235FC4D1C7C0E3E0077E250 /* Alarm.swift in Sources */,
 				02C6DEC81C77EC44009F5A38 /* AppDelegate.swift in Sources */,
 				02C6DEE51C7800DB009F5A38 /* PickerTableViewCell.swift in Sources */,
 				024D9AE31C78E83900C361C4 /* SnoozeTableViewCell.swift in Sources */,
 				024D9ADD1C78E80E00C361C4 /* RepeatTableViewCell.swift in Sources */,
 				02C6DEE11C77F5A7009F5A38 /* UIColor.swift in Sources */,
+				0235FC4C1C7C0E3E0077E250 /* Alarm+CoreDataProperties.swift in Sources */,
 				024D9AE11C78E83200C361C4 /* SoundTableViewCell.swift in Sources */,
 				02C6DEDA1C77ECC5009F5A38 /* AlarmListTableViewController.swift in Sources */,
 				02EFBCF21C78EEF00074756D /* DeleteAlarmTableViewCell.swift in Sources */,
 				02C6DEE31C77FEA6009F5A38 /* AlarmDetailTableViewController.swift in Sources */,
 				02C6DEDD1C77EED9009F5A38 /* AlarmTableViewCell.swift in Sources */,
+				02EFBCF51C794AB20074756D /* Alarm.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +363,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		02EFBCF31C794AB20074756D /* Alarm.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				02EFBCF41C794AB20074756D /* Alarm.xcdatamodel */,
+			);
+			currentVersion = 02EFBCF41C794AB20074756D /* Alarm.xcdatamodel */;
+			path = Alarm.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 02C6DEBC1C77EC44009F5A38 /* Project object */;
 }

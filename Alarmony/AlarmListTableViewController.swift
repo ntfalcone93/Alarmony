@@ -13,10 +13,50 @@ class AlarmListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        createLocalNotif()
         
         // Edit Button
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    
+    func createLocalNotif() {
+        let localNotif = UILocalNotification()
+        localNotif.alertBody = "This might just work"
+        localNotif.alertTitle = "Please work!!"
+        localNotif.hasAction = true
+        localNotif.category = "categoriesForNotif"
+        localNotif.fireDate = NSDate().dateByAddingTimeInterval(5)
+        
+        // Create action for Local Notification
+        let okAction = UIMutableUserNotificationAction()
+        okAction.activationMode = .Background
+        okAction.identifier = "okAction"
+        okAction.title = "OK"
+        okAction.destructive = false
+        okAction.authenticationRequired = false
+        
+        let snoozeAction = UIMutableUserNotificationAction()
+        snoozeAction.identifier = "snoozeAction"
+        snoozeAction.activationMode = .Background
+        snoozeAction.title = "Snooze"
+        snoozeAction.destructive = false
+        snoozeAction.authenticationRequired = false
+        
+        let categoriesForNotif = UIMutableUserNotificationCategory()
+        categoriesForNotif.identifier = "categoriesForNotif"
+        categoriesForNotif.setActions([okAction, snoozeAction], forContext: .Default)
+//        categoriesForNotif.setActions([okAction, snoozeAction], forContext: .Minimal)
+        if let categorySet = NSSet(object: categoriesForNotif) as? Set<UIUserNotificationCategory> {
+            let settings = UIUserNotificationSettings(forTypes: [.Alert, .Sound], categories: categorySet)
+            UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        }
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotif)
+    }
+    
+    func setupNotificationActions() {
+        
     }
     
     // MARK: - Table view data source
@@ -34,6 +74,10 @@ class AlarmListTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
     }
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
